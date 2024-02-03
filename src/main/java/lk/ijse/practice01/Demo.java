@@ -13,6 +13,7 @@ public class Demo extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("Last Path: "+req.getServletPath());
         String name = req.getHeader("name");
         Integer contact = Integer.valueOf(req.getParameter("contact"));
         System.out.println(name);
